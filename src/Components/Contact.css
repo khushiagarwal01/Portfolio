@@ -1,0 +1,152 @@
+.contact {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  padding: 4rem;
+  height: 100vh;
+  
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.awesome {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 9rem;
+}
+
+.awesome span {
+  display: block;
+  
+}
+
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px; /* Set maximum width for form */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  background: transparent;
+  backdrop-filter: blur(10px); /* Optional glass effect */
+  justify-content: center; /* Centers items vertically */
+  align-items: center; /* Centers items horizontally */
+}
+
+form .user {
+  width: 100%; /* Full width input fields */
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid orange;
+  border-radius: 5px;
+  outline: none;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+form .user:focus {
+  border-color: darkorange;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5); /* Shadow on focus */
+}
+
+form .button {
+  align-self: center; /* Centers the button in the form */
+ width: 6rem;
+ font-size: 0.5rem;
+ height: 2rem;
+ margin-top:1rem ;
+}
+
+form .button:hover {
+  
+  transform: scale(1.05);
+  color: var(--orange); /* Subtle hover effect */
+  background: white;
+}
+
+.blur {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+
+  .s-blur1 {
+    bottom: 0; /* Position it at the bottom */
+    left: 0;   /* Align it to the left */
+    position: absolute; /* Ensure it stays within its container */
+  }
+ 
+
+.c-blur1 {
+  top: 9rem;
+  left: 5%;
+}
+.c-blur2 {
+    top: 40%;
+    left: 20%;
+  }
+
+  .happy {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 0.5rem; /* Adds space between items */
+  }
+  
+  .happy span {
+    display: inline-block; /* Ensures spans are treated as inline elements */
+  }
+  
+.happy img{
+  width:1rem;
+  height: 1rem;
+  border-radius: 100%;
+}
+@media screen and (max-width: 480px) {
+  .contact {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: auto; /* Adjust to fit the content dynamically */
+  }
+
+  .left {
+    margin-top: 3rem;
+  }
+
+  .awesome {
+    margin-bottom: 1rem; /* Reduce margin for smaller screens */
+    text-align: center; /* Center-align the text */
+  }
+
+  .awesome span {
+    font-size: 1.5rem; /* Reduce font size */
+    line-height: 1.2; /* Adjust line spacing for better readability */
+  }
+
+  .right .user {
+    width: 14rem;
+    height: 1rem;
+  }
+  .but{
+    margin-bottom: 4rem;
+    
+  }
+}

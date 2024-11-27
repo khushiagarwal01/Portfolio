@@ -1,0 +1,19 @@
+.f-div{
+    justify-content: space-around;
+    display: flex;
+    background: white;
+    box-Shadow : 0px 19px 60px rgb(0 0 0 / 8%);
+ 
+    border-radius: 17px;
+    align-items: center;
+    height: 4.5rem;
+    padding: 2px 15px 2px 15px;
+
+}
+.f-div>img{
+    transform: scale(0.4);
+}
+.f-div>span{
+    font-family: sans-serif;
+    font-size: 16px;
+}

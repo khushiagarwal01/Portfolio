@@ -1,0 +1,261 @@
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: auto; /* Allow the height to adjust based on content */
+    margin-bottom: 8rem;
+    gap: 5rem;
+    position: relative; /* Needed for placing background blur and additional effects */
+    background-size: 400% 400%; /* Background for smooth animation */
+    animation: gradientAnimation 15s ease infinite; /* Animated gradient effect */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-between; /* Space between image and achievements */
+    width: 100%;
+    max-width: 1200px;
+    gap: 12rem;
+}
+
+.experience-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image both horizontally and vertically */
+    padding-right: 20px; /* Space between the image and achievements */
+    position: relative;
+    margin-top: 0rem;
+}
+
+/* Center the image within the flex container */
+.experience-photo {
+    width: 290px;  /* Adjust the size of the square image */
+    height: 290px; /* Make the image square */
+    border-radius: 10px;  /* Slight rounding for square image */
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid var(--orange);
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Default shadow */
+}
+
+/* Hover effect for the image */
+.experience-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  /* Larger shadow on hover */
+    border-color: #87e6fb;  /* Change border color on hover to match the circle color */
+    background-image: linear-gradient(to bottom, #87e6fb, #ffc05c 100%); /* Add gradient on hover */
+}
+
+/* Optional blur background overlay */
+.blur {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1; /* Ensure the blur is above the image */
+   filter: blur(10px); /* Add blur effect */
+   background: rgba(171, 241, 255, 0.58); /* Optional: Background color with opacity */
+}
+
+
+/* Achievements section */
+.achievements {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 2rem; /* Space between the circles */
+    justify-items: center; /* Center the circles horizontally */
+    align-items: center; /* Center the circles vertically */
+    margin-right: 1rem;
+    position: relative;
+}
+
+/* Individual achievement (circle and text) */
+.acheivement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column; /* Stack circle and text vertically */
+    text-align: center;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 2; /* Ensure text is above the blurred background */
+}
+.achievements::before {
+    content: '';
+    position: absolute;
+   right: 1rem;
+   top: 5;
+    width: 500px; /* Control the size of the blur spot */
+    height: 250px; /* Control the size of the blur spot */
+    background: var(--purple); /* Optional background color */
+    filter: blur(50px); /* Moderate blur */
+    z-index: 1; /* Make sure it stays behind the content */
+    border-radius: 50%; /* Optional: for a circular shape */
+    pointer-events: none; /* Ensure it does not block any clicks */
+}
+
+
+.image-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.image-text {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Gap between text and image */
+    transition: transform 0.3s ease-in-out;
+}
+
+.khushi-text {
+    color: black;
+}
+
+.skills-text {
+    color: var(--orange); /* Orange color for "Skills" */
+}
+
+.image-text:hover {
+    transform: scale(1.1);
+}
+.achievements::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px; /* Control the size of the blur spot */
+    height: 250px; /* Control the size of the blur spot */
+    background: var(--purple); /* Optional background color */
+    filter: blur(50px); /* Moderate blur */
+    z-index: 1; /* Make sure it stays behind the content */
+    border-radius: 50%; /* Optional: for a circular shape */
+    pointer-events: none; /* Ensure it does not block any clicks */
+}
+
+/* Circle styles */
+.circle {
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-bottom: 10px; /* Space between circle and text */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    border: 3px solid var(--orange);
+}
+
+/* Circle hover effect */
+.circle:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    border: 4px solid var(--orange);
+}
+
+/* Circle inner gradient */
+.circle::before {
+    border-radius: 50%;
+    content: '';
+    background-image: linear-gradient(to bottom, #87e6fb, #ffc05c 100%);
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow around the circle */
+    border: 3px solid var(--orange);
+}
+
+/* Individual achievement text */
+.acheivement .span1 {
+    margin-top: 1rem;
+}
+
+.acheivement span:nth-of-type(2) {
+    color: var(--orange); /* Color the second span orange */
+}
+
+/* Animation for circles */
+@keyframes circleAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.achievements .circle {
+    animation: circleAnimation 3s ease-in-out infinite; /* Circle floating effect */
+}
+@media (max-width: 500px) {
+    .experience {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content horizontally */
+        gap: 3rem; /* Adjust space between elements */
+        margin-bottom: 5rem; /* Adjust bottom margin */
+    }
+
+    .experience-container {
+        flex-direction: column; /* Stack image and achievements vertically */
+        gap: 3rem; /* Adjust gap between the image and achievements */
+        justify-content: center; /* Center the content */
+        align-items: center; /* Center the content */
+    }
+
+    .experience-image {
+        padding-right: 0; /* Remove padding for better centering */
+        margin-top: 0; /* Remove margin */
+        justify-content: center; /* Center the image within its container */
+        align-items: center;
+    }
+
+    .experience-photo {
+        width: 80%;  /* Make the image take up more space (or adjust based on your preference) */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .achievements {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Reduce columns to 2 for smaller screens */
+        gap: 2rem; /* Adjust space between the circles */
+        width: 100%; /* Ensure it fits the screen */
+        margin-top: 2rem; /* Add space above the circles */
+    }
+
+    .circle {
+        width: 3rem; /* Reduce the size of the circles */
+        height: 3rem; /* Keep the circles proportionate */
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+
+    .image-text {
+        font-size: 24px; /* Adjust text size for smaller screens */
+    }
+}

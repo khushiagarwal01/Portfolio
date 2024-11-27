@@ -1,0 +1,102 @@
+.n-wrapper{
+    display: flex;
+    height:10vh;
+    justify-content: space-between;
+}
+
+.n-left{
+    flex: 1;
+    align-items:center;
+    display:flex;
+    gap:2rem;
+}
+.n-name{
+    font-weight:bold ;
+    font-size:2rem;
+}
+.n-name span {
+    display: inline-block; /* Ensures each letter is treated separately */
+    font-size: 2rem; /* Adjust size as needed */
+    color: black;
+    animation: colorCycle 2s infinite;
+  }
+  
+  .n-name span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .n-name span:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .n-name span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .n-name span:nth-child(4) {
+    animation-delay: 0.9s;
+  }
+  
+  .n-name span:nth-child(5) {
+    animation-delay: 1.2s;
+  }
+  
+  .n-name span:nth-child(6) {
+    animation-delay: 1.5s;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes colorCycle {
+    0% {
+      color: black;
+    }
+    50% {
+      color: orange;
+    }
+    100% {
+      color: black;
+    }
+  }
+  
+.n-right{
+    flex:1;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    font-weight: 400;
+}
+.n-list{
+    flex:10;
+}
+.n-list>ul{
+display: flex;
+gap:2rem;
+margin-right:4rem;
+cursor: pointer;
+}
+li:hover{
+color: var(--orange);
+}
+
+.n-list>ul>li:hover{
+    cursor:pointer;
+    color:var(--orange);
+}
+.n-button{
+    flex:2;
+    font-size: 0.5rem;
+}
+@media screen and (max-width: 500px) {
+    .n-list {
+      display: none;
+    }
+    .n-name {
+      display: flex;
+      flex-direction: row; /* Ensure the name stays in a row on mobile */
+      font-size: 1.5rem; /* Reduce font size on mobile if needed */
+    }
+  
+    .n-name span {
+      margin-right: 5px; /* Add space between letters */
+    }
+}

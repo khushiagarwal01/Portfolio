@@ -1,0 +1,178 @@
+.works{
+    padding:0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin-top:4rem;
+}
+.awesome{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.awesome>:nth-child(1){
+color: var(--black);
+font-size: 2.5rem;
+font-weight: bold;
+}
+.awesome>:nth-child(2){
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+    }
+.awesome>:nth-child(3){
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 1rem;
+    }
+.w-right{
+    position: relative;
+    right: 3rem;
+}
+.w-maincircle{
+    position: relative;
+    left: 9rem;
+    height: 18rem;
+    width: 18rem;
+    border-radius: 100%;
+    box-shadow: var(--smboxShadow);
+    top: 2rem;
+    background: white;
+}
+.w-maincircle>*{
+    position: absolute;
+}
+.w-maincircle>:nth-child(1){
+    top: -3rem;
+    left: 6rem;
+}
+.w-maincircle>:nth-child(2){
+    left: -3rem;
+    top: 5rem;
+}
+.w-maincircle>:nth-child(3){
+    left: 6rem;
+    top: 5rem;
+}
+.w-maincircle>:nth-child(4){
+    left: 15rem;
+    top: 5rem;
+}
+.w-maincircle>:nth-child(5){
+    left: 6rem;
+    top: 13rem;
+}
+
+.w-circle{
+    border: 5px solid #ebebeb;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    box-shadow: var(--smboxShadow);
+    background: white;
+
+}
+.w-circle>img{
+    transform: scale(0.6);
+}
+.bg-circle{
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border-radius: 100%;
+    z-index: -1;
+}
+.blue{
+   background: #1949B8; 
+   left: 18rem;
+   top: 0rem;
+}
+.yellow{
+    background: #F5C32C; 
+
+    left: 18rem;
+    top: 8rem;
+ }
+ @media screen and (max-width: 500px) {
+    .works {
+        flex-direction: column;
+        height: auto;  /* Adjust height for better responsiveness */
+        padding: 0;
+        gap: 5rem;
+    }
+
+    .w-right {
+        bottom: 0; /* Reset the bottom property to avoid overlap */
+        display: flex;
+        align-items: center;
+        justify-content: center;  /* Center the content */
+        position: relative;
+        transform: scale(0.7);
+    }
+
+    .w-maincircle {
+        position: relative;
+        top: 0;  /* Adjust the positioning for better alignment */
+        left: 0;  /* Align the circle to the center */
+        margin-top: 0rem;  /* Add space above the main circle */
+        margin-bottom: 6rem;
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .bg-circle {
+        left: 5rem !important;  /* Adjust the background circle's position */
+        top: -5rem;
+        z-index: -1;
+    }
+
+    /* Make sure that circles inside the main circle are properly aligned and not overlapping */
+    .w-maincircle > * {
+        position: absolute;
+    }
+
+    .w-maincircle>:nth-child(1) {
+        top: -2rem;
+        left: 4rem;
+    }
+
+    .w-maincircle>:nth-child(2) {
+        left: -2rem;
+        top: 4rem;
+    }
+
+    .w-maincircle>:nth-child(3) {
+        left: 4rem;
+        top: 4rem;
+    }
+
+    .w-maincircle>:nth-child(4) {
+        left: 12rem;
+        top: 4rem;
+    }
+
+    .w-maincircle>:nth-child(5) {
+        left: 4rem;
+        top: 10rem;
+    }
+
+    .w-circle {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .w-circle > img {
+        transform: scale(0.5); /* Adjust image size within circles */
+    }
+
+    .s-button {
+        display: none;  /* Hide button on small screens */
+    }
+    .bg-circle{
+        display: none;
+    }
+}
